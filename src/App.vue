@@ -15,8 +15,8 @@
             <div v-for="(photo, idx) in info" :key="idx" class="photo">
               <img :src="photo.urls.small" alt="" />
               <div class="photo-data">
-                <div class="photo-name"></div>
-                <div class="photo-author">{{ photo.width }}</div>
+                <div class="photo-name">{{ photo.user.name }}</div>
+                <div class="photo-author">{{ photo.user.location }}</div>
               </div>
             </div>
           </div>
@@ -80,5 +80,9 @@ body {
   padding: 0 5rem;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.photo {
+  border-radius: 20px;
 }
 </style>
